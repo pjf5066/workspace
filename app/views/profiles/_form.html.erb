@@ -1,0 +1,44 @@
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#profile">Edit Profile</a></li>
+  <li><a data-toggle="tab" href="#social">Edit Social Links</a></li>
+</ul>
+    <%= simple_form_for @profile, validate: true, html: { multipart: true } do |f| %>
+      <div class="tab-content">
+        <div id="profile" class="tab-pane fade in active">
+            <br>
+
+              <%= f.input :first_name %><br>
+
+              <%= f.input :last_name %><br>
+
+              <%= f.input :address %><br>
+
+              <%= f.input :gender_id, :collection => Gender.order(:name),
+                          :label_method => :name, :value_method => :id, :label => "Gender" , :include_blank => true %>
+
+              <%= f.input :state_id, :collection => State.order(:name),
+                          :label_method => :name, :value_method => :id, :label => "State" , :include_blank => false %>
+
+              <%= f.input :city %><br>
+
+              <%= f.input :zip_code %><br>
+
+              <%= f.input :phone %><br>
+
+              <%= f.input :avatar %><br>
+        </div>
+        <div id="social" class="tab-pane fade">
+            <br>
+            <div class="well well-sm">
+              <i class="fa fa-exclamation"></i> Note: Use your full Url from your social links sample: <font class="blue">https://twitter.com/events</font>
+            </div>
+            <div class="form-group">
+              <%= f.input :twitter %>
+              <%= f.input :facebook %>
+              <%= f.input :linkedin %>
+              <%= f.input :googleplus %>
+            </div>  
+        </div>
+      </div>
+      <%= f.button :submit, class: "btn btn-info", data: { disable_with: "Please wait..." } %>
+  <% end %>

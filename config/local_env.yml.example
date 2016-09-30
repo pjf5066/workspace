@@ -1,0 +1,32 @@
+development:
+        
+        HOST_URL_OR_IP: "https://hostname.com"
+
+        S3_BUCKET: "bucketname"
+        S3_KEY_ACCESS: "asdasdasdafadfasdasdasdasdasdasdasd"
+        S3_KEY_ID: "asdasdasdasdadasdasd"
+        
+        TWITTER_CONSUMER_KEY: "asdasdasdasdasd"
+        TWITTER_CONSUMER_SECRET: "adasdasdasdasdasdasd"
+        
+        LINKED_CLIENT_ID: "aasdasdasdasdasd"
+        LINKED_CLIENT_SECURITY: "asdasdasdasdasd"
+        
+        GOOGLE_CLIENT_ID: "asdasd-asdasdasdasd.apps.googleusercontent.com"
+        GOOGLE_CLIENT_SECRET: "asdasdasd"
+        
+        SECRET_KEY_BASE: "asdadasdasdasdasdasdasdadasdasdasdasdasdasddasdasdasdasdasd"
+        
+        SITE_EMAIL: "asdasd@asdasd.com"
+        
+        
+        SMTP_ADDRESS: "smtp.asdasd.net"
+        SMTP_PORT: "587"
+        SMTP_USER_PRO: "user"
+        SMTP_PASS_PRO: "asdasdasd2e34234234234"
+        
+        DB_HOST: "localhost"
+        DB_USER: "postgres"
+        DB_PASSWORD: "3s21assdsad03s2ds2w22s0sa"
+        DB_DATABASE: "dbname"
+        DB_ADAPTER: "postgresql"

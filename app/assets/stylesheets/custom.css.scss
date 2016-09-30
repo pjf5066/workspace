@@ -1,0 +1,80 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap/theme';
+@import "font-awesome";
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+
+// Bootstrap Colors
+$default: #ffffff;
+$primary: #428bca;
+$success: #5cb85c;
+$info:    #5bc0de;
+$warning: #f0ad4e;
+$danger:  #d9534f;
+
+// Reset and Sizing
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  border-bottom: .15em solid black;
+  border-radius: 3px;
+  font-weight:lighter;
+  margin:0.2em 0.1em;
+  padding:5px 10px;
+  
+}
+
+.btn-lg {
+  padding: 1em 2em;}
+
+.btn-sm {
+  font-size: .85em;
+  padding: .5em 1em;
+  
+}
+
+.btn-xs {
+  font-size:10px;
+  padding:5px;
+}
+
+// Colors
+@mixin btn($btncolor){
+  border-color: darken($btncolor,15%);
+  background-image: linear-gradient($btncolor, darken($btncolor,5%));
+  &:hover {
+    background: linear-gradient(darken($btncolor,5%), darken($btncolor,10%));
+  }
+}
+
+.btn-default { @include btn($default);}
+.btn-primary { @include btn($primary);}
+.btn-success { @include btn($success);}
+.btn-info    { @include btn($info);}
+.btn-warning { @include btn($warning);}
+.btn-danger  { @include btn($danger);}
+
+.well {
+  background:#F5F5F5;
+  border:1px solid #E3E3E3;
+  border-radius:4px;
+  box-shadow:none;
+  margin-bottom:20px;
+  min-height:20px;
+  padding:10px;
+}
+
+.blue{
+  color: #D02090;
+}

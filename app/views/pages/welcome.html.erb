@@ -1,0 +1,17 @@
+<% content_for :title, "Wellcome | Events" %>
+
+<% if current_user.role_id == 1 #User %>
+    <%= render 'pages/welcome/user' %>
+<% end %>
+
+<% if current_user.role_id == 2 #Business %>
+    <%= render 'pages/welcome/business' %>
+<% end %>
+
+<% if current_user.role_id == 3 #Moderator %>
+    <%= render 'pages/welcome/moderator' %>
+<% end %>
+
+<% if current_user.role_id == 4 #Admin %>
+    <%= render 'pages/welcome/admin' %>
+<% end %>

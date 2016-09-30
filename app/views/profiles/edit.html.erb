@@ -1,0 +1,36 @@
+<% content_for :title, "Edit profile" %>
+<h3>Editing Profile</h3>
+<hr>
+
+<div class="row">
+    <div class="col-md-8">
+      <%= render 'form' %><br>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Profile Info:</h3>
+          </div>
+          <div class="panel-body">
+            <%= show_avatar %>
+            <hr>
+            <%= @profile.first_name %><br>
+            <%= @profile.last_name %><br>
+            <%= @profile.address %><br>
+            <%= @show_city %><br>
+            <%= @show_state %><br>
+            <%= @profile.zip_code %><br>
+            <%= show_email %>
+          </div>
+        </div>
+        <p>20% To Complete Profile</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width: 80%">
+            <span class="sr-only">80% Complete (success)</span>
+          </div>
+          <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+            <span class="sr-only">20% Complete (warning)</span>
+          </div>
+        </div>
+    </div>
+</div>

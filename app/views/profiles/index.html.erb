@@ -1,0 +1,23 @@
+<% content_for :title, "View Profile" %>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Listing Profiles</h1>
+    </div>
+</div>
+    <% @showProfiles.each do |profileme| %>
+    <div class="row profileslist">
+            <div class="col-md-1">
+                <% if profileme.avatar.present? %>
+                    <%= image_tag(profileme.avatar.url(:small), :class => "img-thumbnail img-responsive") %>
+                <% else %>
+                    <%= image_tag("/images/small-avatar.png", :class => "img-thumbnail img-responsive") %>
+                <% end %>
+            </div>
+            <div class="col-md-11">
+                <p>Name: <%= profileme.first_name %> <%= profileme.last_name %><br>
+                State: <%= State.find(profileme.state_id).name %><br>
+                View: <%= link_to 'View', profile_path(profileme) %></p>
+            </div>
+    </div> 
+    <% end %>

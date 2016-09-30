@@ -1,0 +1,7 @@
+.rspec
+/log
+/tmp
+/.c9
+.env
+/config/local_env.yml
+run.sh
